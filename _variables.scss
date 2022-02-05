@@ -2,5 +2,15 @@ $colorBlack: #000000;
 $colorLowBlack: #101010;
 $colorRed: #ED4C5C;
 $colorRedGradient: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+$colorHeaderBack: #C4C4C4;
 $colorWhite: #FFFFFF;
+$colorFeatureBack: #FAFAFA;
+$colorGrey: rgba(16, 16, 16, 0.08);
 $boldFont: 700;
+
+@mixin flexDis($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

@@ -9,87 +9,87 @@
         <title>BOLD PL</title>
     </head>
     <body>
-      <header>
+      <header class="header">
         <div class="layer">
           <nav class="navbar">
-              <a href="#" class="navbar__logo">
+              <a href="/" class="navbar__logo text-uppercase">
                 <img alt="logo" src="logo.png" />
                 <span>cloudbudget</span>
               </a>
               <span class="navbar__hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
               </span>
-              <ul class="navbar__main-nav">
-                <li class="navbar__main-nav__li text-bold"><a href="#">overview</a></li>
-                <li class="navbar__main-nav__li"><a href="#feature">features</a></li>
-                <li class="navbar__main-nav__li"><a href="#technology">technology</a></li>
-                <li class="navbar__main-nav__li"><a href="#contact">contact</a></li>
-                <li class="navbar__main-nav__li"><a href="#sign-up">sign up</a></li>
+              <ul class="navbar__main-nav text-uppercase">
+                <li class="navbar__main-nav__li text-bold"><a class="link" href="/">overview</a></li>
+                <li class="navbar__main-nav__li"><a class="link" href="#feature">features</a></li>
+                <li class="navbar__main-nav__li"><a class="link" href="#technology">technology</a></li>
+                <li class="navbar__main-nav__li"><a class="link" href="#contact">contact</a></li>
+                <li class="navbar__main-nav__li"><a class="link" href="#sign-up">sign up</a></li>
               </ul>
           </nav>
           <div class="info-text">
-            <h1 class="info-text__title">cloudbudget</h1>
+            <h1 class="info-text__title text-uppercase text-bold">cloudbudget</h1>
             <p class="info-text__paragraph">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of<br> Up to €4.99</p>
-            <button class="info-text__button">sign up</button>
+            <a class="link" href="#sign-up"><button class="info-text__button text-uppercase text-red btn">sign up</button></a>
           </div>
         </div>
       </header>
 
       <section class="feature-section" id="feature">
-        <h1 class="feature-section__title">Features</h1>
+        <h1 class="section-title">Features</h1>
         <div class="feature-section__content">
           <div class="feature-section__card">
             <img src="feature1.png" />
             <div class="feature-section__card__text">
-              <h2 class="feature-section__card__title">Supports All Currencies and Cards</h2>
-              <p class="feature-section__card__paragraph">We support all popular currencies and is fully customizable to add</p>
-              <span class="feature-section__card__link text-red">Read More</span>
+              <h2 class="feature-section__card__text__title">Supports All Currencies and Cards</h2>
+              <p class="feature-section__card__text__paragraph">We support all popular currencies and is fully customizable to add</p>
+              <span class="feature-section__card__text__link text-bold text-red">Read More</span>
             </div>
           </div>
           <div class="feature-section__card">
             <img src="feature2.png" />
             <div class="feature-section__card__text">
-              <h2 class="feature-section__card__title">Manage your expanses on the go</h2>
-              <p class="feature-section__card__paragraph">You can access your account from anywhere in the world on any device</p>
-              <span class="feature-section__card__link text-red">Read More</span>
+              <h2 class="feature-section__card__text__title">Manage your expanses on the go</h2>
+              <p class="feature-section__card__text__paragraph">You can access your account from anywhere in the world on any device</p>
+              <span class="feature-section__card__text__link text-bold text-red">Read More</span>
             </div>
           </div>
           <div class="feature-section__card">
             <img src="feature3.png" />
             <div class="feature-section__card__text">
-              <h2 class="feature-section__card__title">Cloud Bugdet Management Software</h2>
-              <p class="feature-section__card__paragraph">Our software is made so you can access and manage your budget</p>
-              <span class="feature-section__card__link text-red">Read More</span>
+              <h2 class="feature-section__card__text__title">Cloud Bugdet Management Software</h2>
+              <p class="feature-section__card__text__paragraph">Our software is made so you can access and manage your budget</p>
+              <span class="feature-section__card__text__link text-bold text-red">Read More</span>
             </div>
           </div>
         </div>
       </section>
 
       <section class="technology-section" id="technology">
-        <h1 class="technology-section__title">Technology</h1>
-        <div class="technology-section__container">
-          <div class="technology-section__card">
-            <p class="technology-section__num">01</p>
-            <div class="technology-section__img-container">  
-              <div class="technology-section__icon"><img src="first.png" /></div>         
-              <h2 class="technology-section__card__title">Cloud Storage</h2>
-              <p class="technology-section__card__paragraph">Access your account from anywhere in the world on any device</p>
+        <h1 class="section-title">Technology</h1>
+        <div class="container">
+          <div class="container__card">
+            <p class="container__card__num text-bold">01</p>
+            <div class="content">  
+              <div class="content__icon"><img src="technology1.png" /></div>         
+              <h2 class="content__title">Cloud Storage</h2>
+              <p class="content__paragraph">Access your account from anywhere in the world on any device</p>
             </div>
           </div>
-          <div class="technology-section__card">
-            <p class="technology-section__num">02</p>
-            <div class="technology-section__img-container">  
-              <div class="technology-section__icon"><img src="second.png" /></div>        
-              <h2 class="technology-section__card__title">Secure</h2>
-              <p class="technology-section__card__paragraph">All your information is stored on secure cloud server</p>
+          <div class="container__card">
+            <p class="container__card__num text-bold">02</p>
+            <div class="content">  
+              <div class="content__icon"><img src="technology2.png" /></div>        
+              <h2 class="content__title">Secure</h2>
+              <p class="content__paragraph">All your information is stored on secure cloud server</p>
             </div>
           </div>
-          <div class="technology-section__card">
-            <p class="technology-section__num">03</p>
-            <div class="technology-section__img-container">  
-              <div class="technology-section__icon"><img src="third.png" /></div>        
-              <h2 class="technology-section__card__title">PDF Download</h2>
-              <p class="technology-section__card__paragraph">Download any of your reports in PDF format</p>
+          <div class="container__card">
+            <p class="container__card__num text-bold">03</p>
+            <div class="content">  
+              <div class="content__icon"><img src="technology3.png" /></div>        
+              <h2 class="content__title">PDF Download</h2>
+              <p class="content__paragraph">Download any of your reports in PDF format</p>
             </div>
           </div>
         </div>
@@ -101,14 +101,14 @@
             <h1 class="contact-section__head__title">Contact</h1>
             <p class="contact-section__head__paragraph">Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours</p>
           </div>
-          <form class="contact-section__form" id="submit">
-            <div class="contact-section__form__content">
-              <input class="contact-section__form__input" type="text" placeholder="First Name">
-              <input class="contact-section__form__input" type="text" placeholder="Last Name">
+          <form class="form" id="sign-up">
+            <div class="form__content">
+              <input class="form__input" type="text" placeholder="First Name">
+              <input class="form__input" type="text" placeholder="Last Name">
             </div>
-            <input class="contact-section__form__input input-large" type="number" placeholder="Phone Number">
-            <input class="contact-section__form__input input-large" type="search" placeholder="Select Service">
-            <input class="contact-section__form__input input-submit" type="submit" value="Submit now">
+            <input class="form__input input-large" type="number" placeholder="Phone Number">
+            <input class="form__input input-large" type="search" placeholder="Select Service">
+            <input class="form__input input-submit text-uppercase btn" type="submit" value="Submit now">
           </form>
         </div>
       </section>

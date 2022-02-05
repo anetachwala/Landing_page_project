@@ -1,8 +1,16 @@
+@import './variables';
+@import './header';
+@import './section-feature';
+@import './section-technology';
+@import './section-contact';
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .text-bold {
@@ -11,4 +19,23 @@
 
 .text-red {
   color: $colorRed;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 160px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  padding: 75px 0;
 }

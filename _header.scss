@@ -1,0 +1,133 @@
+@import "./variables";
+
+%col-flex-j-center {
+  @include flexDis(column, center, center);
+}
+
+%col-flex-j-s-between {
+  @include flexDis(column, space-between, center);
+}
+
+%main-padding {
+  padding: 0 30px;
+}
+
+.header {
+  @extend %col-flex-j-center;
+  background: url(backgroundImage.png) no-repeat center, $colorHeaderBack;
+  background-size: cover;
+  height: 782px;
+  position: relative;
+}
+
+.layer {
+  background: $colorRedGradient;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 58px;
+  color: $colorWhite;
+}
+
+.navbar {
+  @extend %main-padding;
+  &__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $colorWhite;
+    column-gap: 10px;
+    font-size: 18px;
+  }
+  &__hamburger {
+    position: absolute;
+    top: 54px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  &__main-nav {
+    display: none;
+    &__li {
+      text-align: center;
+      margin-top: 12px;
+      list-style-type: none;
+      .link {
+        text-decoration: none;
+        font-size: 14px;
+        color: $colorWhite;
+      }
+    }
+  }
+  &__main-nav.active {
+    display: block;
+    position: absolute;
+    top: 76px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.info-text {
+  @extend %col-flex-j-s-between;
+  padding: 177px 0 187px 0;
+  height: 100%;
+  text-align: center;
+  &__title {
+    font-size: clamp(
+      36px,
+      4vw,
+      72px
+    ); //do zmiany!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    letter-spacing: 0.05em;
+  }
+  &__paragraph {
+    @extend %main-padding;
+    width: 100%;
+    max-width: 560px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  &__button {
+    background: $colorWhite;
+    border: none;
+  }
+  &__button:hover {
+    background: rgba(255, 255, 255, 0);
+    border: 1.5px solid $colorWhite;
+    color: $colorWhite;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  %row-flex-j-s-between-media {
+    @include flexDis(row, space-between, center);
+  }
+
+  %col-flex-j-center-media {
+    @include flexDis(column, center, center);
+  }
+
+  .layer {
+    @extend %col-flex-j-center-media;
+  }
+
+  .navbar {
+    width: 100%;
+    max-width: 1108px + (2 * 30px);
+    @extend %row-flex-j-s-between-media;
+    &__hamburger {
+      display: none;
+    }
+    &__main-nav {
+      @extend %row-flex-j-s-between-media;
+      width: 445px;
+      &__li {
+        margin: 0;
+      }
+    }
+  }
+}

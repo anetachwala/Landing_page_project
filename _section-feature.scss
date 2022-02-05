@@ -1,0 +1,53 @@
+@import "./variables";
+
+%row-flex-j-center {
+  @include flexDis(row, center, center);
+}
+
+%col-flex-j-center {
+  @include flexDis(col, center, center);
+}
+
+%col-flex-j-s-between {
+  @include flexDis(col, space-between, center);
+}
+
+.feature-section {
+  background: $colorFeatureBack;
+  min-height: 660px;
+}
+
+.feature-section__content {
+  @extend %row-flex-j-center;
+  flex-wrap: wrap;
+  padding: 0px 30px 124px 30px;
+  column-gap: 30px;
+}
+
+.feature-section__card {
+  @extend %col-flex-j-center;
+  &__text {
+    @extend %col-flex-j-s-between;
+    height: 198px;
+    width: 293px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 70px;
+    background: $colorWhite;
+    text-align: center;
+    padding: 33px 32px 25px 32px;
+    &__title {
+      font-size: 18px;
+      color: $colorLowBlack;
+    }
+    &__paragraph {
+      font-size: 12px;
+      color: $colorLowBlack;
+    }
+    &__link {
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import "./variables";
+
+%col-flex-j-s-between {
+  @include flexDis(col, space-between, center);
+}
+
+%main-padding {
+  padding: 0 30px;
+}
+
+.contact-section {
+  background: $colorRed;
+  color: $colorWhite;
+  padding: 60px 30px;
+}
+
+.contact-section__head {
+  text-align: center;
+  &__title {
+    font-weight: 600;
+    font-size: 36px;
+  }
+  &__paragraph {
+    font-size: 14px;
+    padding-top: 52px;
+    padding-bottom: 60px;
+    line-height: 140%;
+  }
+}
+
+.form {
+  @extend %col-flex-j-s-between;
+  gap: 20px;
+  &__content {
+    @extend %col-flex-j-s-between;
+    gap: 20px;
+  }
+}
+
+.form__input {
+  @extend %main-padding;
+  width: 255px;
+  height: 60px;
+  font-size: 16px;
+  border: 1px solid $colorWhite;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.input-submit {
+  border: 1.5px solid $colorWhite;
+  color: $colorWhite;
+}
+
+.input-submit:hover {
+  background: $colorWhite;
+  color: $colorRed;
+}
+
+::placeholder {
+  color: $colorWhite;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 768px) {
+  %row-flex-j-center-start {
+    @include flexDis(row, center, flex-start);
+  }
+  
+  .contact-section {
+    @extend %row-flex-j-center-start;
+    padding: 117px 0 78px 0;
+  }
+
+  .contact-section__head {
+    text-align: left;
+    width: 540px;
+    &__paragraph {
+      width: 434px;
+    }
+  }
+
+  .contact-section__inside {
+    @extend %row-flex-j-center-start;
+    flex-wrap: wrap;
+    column-gap: 28px;
+    width: 100%;
+    max-width: 1108px; 
+    margin: 0 30px;
+  }
+
+  .form {
+    &__content {
+      width: 540px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .input-large {
+      width: 540px;
+    }
+    .input-submit {
+      align-self: flex-start;
+    }
+  }
+}

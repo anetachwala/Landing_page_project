@@ -1,0 +1,52 @@
+@import "./variables";
+
+%row-flex-j-center {
+  @include flexDis(row, center, center);
+}
+
+%col-flex-j-center {
+  @include flexDis(col, center, center);
+}
+
+.technology-section {
+  min-height: 455px;
+}
+
+.container {
+  @extend %row-flex-j-center;
+  flex-wrap: wrap;
+  column-gap: 160px;
+  row-gap: 10px;
+  padding-bottom: 59px;
+}
+
+.container__card {
+  @extend %col-flex-j-center;
+  width: 255px;
+  height: 226px;
+  &__num {
+    font-size: 100px;
+    text-align: center;
+    color: $colorGrey;
+  }
+  .content {
+    @extend %col-flex-j-center;
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+    &__icon {
+      width: 80px;
+      height: 80px;
+      text-align: center;
+    }
+    &__title {
+      font-size: 18px;
+      color: $colorLowBlack;
+    }
+    &__paragraph {
+      width: 191px;
+      font-size: 12px;
+      padding-top: 10px;
+    }
+  }
+}
