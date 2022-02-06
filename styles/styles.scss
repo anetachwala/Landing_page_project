@@ -3,7 +3,16 @@
 @import './section-feature';
 @import './section-technology';
 @import './section-contact';
+@import './subpage';
 
+
+%main-padding {
+  padding: 0 30px;
+}
+
+%col-flex-j-center {
+  @include flexDis(column, center, center);
+}
 
 * {
   margin: 0;
@@ -34,8 +43,20 @@
   transition: 0.8s;
 }
 
+.button-white {
+  border: 1.5px solid $colorWhite;
+}
+
+.button-white:hover {
+  background: rgba(255, 255, 255, 0);
+  color: $colorWhite;
+}
+
 .section-title {
   font-size: 36px;
   text-align: center;
   padding: 75px 0;
 }
+
+
+

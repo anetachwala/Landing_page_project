@@ -1,0 +1,23 @@
+@import './variables';
+
+%main-padding {
+  padding: 0 30px;
+}
+
+%col-flex-j-center {
+  @include flexDis(column, center, center);
+}
+
+.redirected-subpage {
+  @extend %col-flex-j-center;
+  gap: 80px;
+  width: 100vw;
+  height: 100vh;
+  background: $colorRed;
+  &__text {
+    @extend %main-padding;
+    text-align: center;
+    color: $colorWhite;
+    font-size: 28px;
+  }
+}

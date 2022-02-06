@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	      <link rel="stylesheet" href="styles.css">
+	      <link rel="stylesheet" href="styles/styles.css">
         <title>BOLD PL</title>
     </head>
     <body>
@@ -13,7 +13,7 @@
         <div class="layer">
           <nav class="navbar">
               <a href="/" class="navbar__logo text-uppercase">
-                <img alt="logo" src="logo.png" />
+                <img alt="logo" src="images/logo.png" />
                 <span>cloudbudget</span>
               </a>
               <span class="navbar__hamburger" onclick="toggleMenu()">
@@ -30,7 +30,7 @@
           <div class="info-text">
             <h1 class="info-text__title text-uppercase text-bold">cloudbudget</h1>
             <p class="info-text__paragraph">Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of<br> Up to €4.99</p>
-            <a class="link" href="#sign-up"><button class="info-text__button text-uppercase text-red btn">sign up</button></a>
+            <a class="link" href="#sign-up"><button class="button-white text-uppercase text-red btn">sign up</button></a>
           </div>
         </div>
       </header>
@@ -39,7 +39,7 @@
         <h1 class="section-title">Features</h1>
         <div class="feature-section__content">
           <div class="feature-section__card">
-            <img src="feature1.png" />
+            <img src="images/feature1.png" />
             <div class="feature-section__card__text">
               <h2 class="feature-section__card__text__title">Supports All Currencies and Cards</h2>
               <p class="feature-section__card__text__paragraph">We support all popular currencies and is fully customizable to add</p>
@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="feature-section__card">
-            <img src="feature2.png" />
+            <img src="images/feature2.png" />
             <div class="feature-section__card__text">
               <h2 class="feature-section__card__text__title">Manage your expanses on the go</h2>
               <p class="feature-section__card__text__paragraph">You can access your account from anywhere in the world on any device</p>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="feature-section__card">
-            <img src="feature3.png" />
+            <img src="images/feature3.png" />
             <div class="feature-section__card__text">
               <h2 class="feature-section__card__text__title">Cloud Bugdet Management Software</h2>
               <p class="feature-section__card__text__paragraph">Our software is made so you can access and manage your budget</p>
@@ -71,7 +71,7 @@
           <div class="container__card">
             <p class="container__card__num text-bold">01</p>
             <div class="content">  
-              <div class="content__icon"><img src="technology1.png" /></div>         
+              <div class="content__icon"><img src="images/technology1.png" alt="cloud_storage_icon"/></div>         
               <h2 class="content__title">Cloud Storage</h2>
               <p class="content__paragraph">Access your account from anywhere in the world on any device</p>
             </div>
@@ -79,7 +79,7 @@
           <div class="container__card">
             <p class="container__card__num text-bold">02</p>
             <div class="content">  
-              <div class="content__icon"><img src="technology2.png" /></div>        
+              <div class="content__icon"><img src="images/technology2.png" alt="secure_icon" /></div>        
               <h2 class="content__title">Secure</h2>
               <p class="content__paragraph">All your information is stored on secure cloud server</p>
             </div>
@@ -87,7 +87,7 @@
           <div class="container__card">
             <p class="container__card__num text-bold">03</p>
             <div class="content">  
-              <div class="content__icon"><img src="technology3.png" /></div>        
+              <div class="content__icon"><img src="images/technology3.png" alt="pdf_download_icon" /></div>        
               <h2 class="content__title">PDF Download</h2>
               <p class="content__paragraph">Download any of your reports in PDF format</p>
             </div>
@@ -101,14 +101,18 @@
             <h1 class="contact-section__head__title">Contact</h1>
             <p class="contact-section__head__paragraph">Questions or concerns? Just fill out the form below and our support team will get back to you within 24 hours</p>
           </div>
-          <form class="form" id="sign-up">
+          <form class="form" id="sign-up" action="html/submited.html" method="GET" onsubmit="return(formValidation())">
             <div class="form__content">
-              <input class="form__input" type="text" placeholder="First Name">
-              <input class="form__input" type="text" placeholder="Last Name">
+              <input class="form__input" id="fname" name="fname" type="text" placeholder="First Name" minlength="3" maxlength="20" oninput="onlyLetters()" />
+              <input class="form__input" type="text" placeholder="Last Name" minlength="3" maxlength="20" />
             </div>
-            <input class="form__input input-large" type="number" placeholder="Phone Number">
-            <input class="form__input input-large" type="search" placeholder="Select Service">
-            <input class="form__input input-submit text-uppercase btn" type="submit" value="Submit now">
+            <input class="form__input input-large" id="number" type="tel" placeholder="Phone Number" minlength="9" maxlength="10" oninput="onlyDigits()" />
+            <select class="form__input input-large" id="select">
+                <option value="" disabled selected>Select Service</option>
+                <option value="first">First option</option>
+                <option value="second">Second option</option>
+            </select>
+            <input class="form__input input-submit text-uppercase btn" type="submit" value="Submit now" />
           </form>
         </div>
       </section>

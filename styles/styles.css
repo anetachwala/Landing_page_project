@@ -1,4 +1,4 @@
-.header, .feature-section__card, .container__card, .container__card .content {
+.header, .feature-section__card, .container__card, .container__card .content, .redirected-subpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,12 +30,12 @@
           align-items: center;
 }
 
-.navbar, .info-text__paragraph, .form__input {
+.navbar, .info-text__paragraph, .form__input, .redirected-subpage__text {
   padding: 0 30px;
 }
 
 .header {
-  background: url(backgroundImage.png) no-repeat center, #C4C4C4;
+  background: url(../images/backgroundImage.png) no-repeat center, #C4C4C4;
   background-size: cover;
   height: 782px;
   position: relative;
@@ -107,7 +107,7 @@
 }
 
 .info-text__title {
-  font-size: clamp(36px, 4vw, 72px);
+  font-size: clamp(2.6rem, 7vw, 72px);
   letter-spacing: 0.05em;
 }
 
@@ -117,17 +117,6 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
-}
-
-.info-text__button {
-  background: #FFFFFF;
-  border: none;
-}
-
-.info-text__button:hover {
-  background: rgba(255, 255, 255, 0);
-  border: 1.5px solid #FFFFFF;
-  color: #FFFFFF;
 }
 
 @media screen and (min-width: 768px) {
@@ -192,7 +181,7 @@
           align-items: center;
 }
 
-.header, .feature-section__card, .container__card, .container__card .content {
+.header, .feature-section__card, .container__card, .container__card .content, .redirected-subpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +270,7 @@
           align-items: center;
 }
 
-.header, .feature-section__card, .container__card, .container__card .content {
+.header, .feature-section__card, .container__card, .container__card .content, .redirected-subpage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,7 +349,7 @@
           align-items: center;
 }
 
-.navbar, .info-text__paragraph, .form__input {
+.navbar, .info-text__paragraph, .form__input, .redirected-subpage__text {
   padding: 0 30px;
 }
 
@@ -401,16 +390,24 @@
   border: 1px solid #FFFFFF;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0);
+  color: #FFFFFF;
 }
 
 .input-submit {
   border: 1.5px solid #FFFFFF;
-  color: #FFFFFF;
 }
 
 .input-submit:hover {
   background: #FFFFFF;
   color: #ED4C5C;
+}
+
+#select {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#select option {
+  background: #ED4C5C;
 }
 
 ::-webkit-input-placeholder {
@@ -487,6 +484,59 @@
   }
 }
 
+.navbar, .info-text__paragraph, .form__input, .redirected-subpage__text {
+  padding: 0 30px;
+}
+
+.header, .feature-section__card, .container__card, .container__card .content, .redirected-subpage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redirected-subpage {
+  gap: 80px;
+  width: 100vw;
+  height: 100vh;
+  background: #ED4C5C;
+}
+
+.redirected-subpage__text {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28px;
+}
+
+.navbar, .info-text__paragraph, .form__input, .redirected-subpage__text {
+  padding: 0 30px;
+}
+
+.header, .feature-section__card, .container__card, .container__card .content, .redirected-subpage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -516,6 +566,15 @@
   cursor: pointer;
   -webkit-transition: 0.8s;
   transition: 0.8s;
+}
+
+.button-white {
+  border: 1.5px solid #FFFFFF;
+}
+
+.button-white:hover {
+  background: rgba(255, 255, 255, 0);
+  color: #FFFFFF;
 }
 
 .section-title {

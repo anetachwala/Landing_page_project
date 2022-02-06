@@ -14,7 +14,7 @@
 
 .header {
   @extend %col-flex-j-center;
-  background: url(backgroundImage.png) no-repeat center, $colorHeaderBack;
+  background: url(../images/backgroundImage.png) no-repeat center, $colorHeaderBack;
   background-size: cover;
   height: 782px;
   position: relative;
@@ -76,11 +76,7 @@
   height: 100%;
   text-align: center;
   &__title {
-    font-size: clamp(
-      36px,
-      4vw,
-      72px
-    ); //do zmiany!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    font-size: clamp(2.6rem, 7vw, 72px); 
     letter-spacing: 0.05em;
   }
   &__paragraph {
@@ -90,15 +86,6 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 36px;
-  }
-  &__button {
-    background: $colorWhite;
-    border: none;
-  }
-  &__button:hover {
-    background: rgba(255, 255, 255, 0);
-    border: 1.5px solid $colorWhite;
-    color: $colorWhite;
   }
 }
 

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	    <link rel="stylesheet" href="../styles/styles.css">
+        <title>BOLD PL</title>
+    </head>
+    <body>
+      <section class="redirected-subpage">
+        <h1 class="redirected-subpage__text">Thanks, <span id="displayedName">...</span>! We will contact with you ASAP!</h1>
+        <a class="link" href="/"><button class="button-white text-uppercase text-red btn">go back!</button></a>
+      </section>
+	  <script type="text/javascript">
+        document.querySelector("#displayedName").innerHTML = (window.location.search).replace("?fname=", "");
+      </script>
+    </body>
+</html>

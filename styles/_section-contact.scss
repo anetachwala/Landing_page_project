@@ -45,16 +45,23 @@
   border: 1px solid $colorWhite;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0);
+  color: $colorWhite;
 }
 
 .input-submit {
   border: 1.5px solid $colorWhite;
-  color: $colorWhite;
 }
 
 .input-submit:hover {
   background: $colorWhite;
   color: $colorRed;
+}
+
+#select {
+  color: rgba(255, 255, 255, 0.5);
+  option {
+    background: $colorRed;
+  }
 }
 
 ::placeholder {
